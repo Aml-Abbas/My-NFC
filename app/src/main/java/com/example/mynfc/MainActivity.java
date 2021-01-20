@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     boolean writeMode;
     Tag tag;
     Context context;
-    EditText textView1;
+    TextView textView1;
     TextView textView2;
     Button button;
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView1 = findViewById(R.id.editText);
+        textView1 = (TextView) findViewById(R.id.editText);
         textView2 = findViewById(R.id.textTag);
         button = findViewById(R.id.button);
         context = this;
