@@ -27,11 +27,11 @@ import java.io.UnsupportedEncodingException;
 
 public class MainActivity extends AppCompatActivity {
     public static final String errorMesseg = "No NFC tag detected";
-    public static final String successWriting = "No NFC tag detected";
-    public static final String errorWriting = "No NFC tag detected";
+    public static final String successWriting = "write success";
+    public static final String errorWriting = "wrtite error";
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
-    IntentFilter[] writingTagFilters;
+    IntentFilter writingTagFilters [];
     boolean writeMode;
     Tag tag;
     Context context;
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         int languageCodeLength = payload[0] & 0063;
 
         try {
-            text = new String(payload, languageCodeLength + 1, payload.length - languageCodeLength, textEncoding);
+            text = new String(payload, languageCodeLength + 1, payload.length - languageCodeLength -1, textEncoding);
         } catch (UnsupportedEncodingException e) {
             Log.e("UnsupportedEncoding", e.toString());
         }
